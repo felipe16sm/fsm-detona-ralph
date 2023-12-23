@@ -1,0 +1,17 @@
+.panel-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background: url('../images/wall.png');
+}
+
+#panel {
+    display: grid;
+    margin-top: 32px;
+    background-color: #FFFE71;
+}
+
+.panel-cell {
+    border: 1px solid #474747;
+    cursor: pointer;
+}

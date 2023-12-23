@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/assets/css/reset.css">
+    <link rel="stylesheet" href="./src/assets/css/menu.css">
     <title>Document</title>
 </head>
 <body>
-    teste
+    <div class="menu">
+        <div class="menu-item time-container">
+            <h2 class="menu-label time-label">Time Left</h2>
+            <span id="time-value" class="menu-value" value="0">0</span>
+        </div>
+        <div class="menu-item score-container">
+            <h2 class="score-label menu-label">Your score</h2>
+            <span id="score-value" class="menu-value" value="0">0</span>
+        </div>
+        <div class="menu-item life-container">
+            <img src="./src/assets/images/player.png" class="player-image" />
+            <span id="life-value" class="menu-value" value="0">x3</span>
+        </div>
+    </div>
 </body>
 </html>

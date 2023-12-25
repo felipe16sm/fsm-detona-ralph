@@ -6,9 +6,10 @@ const state = {
     score: document.querySelector("#score-value"),
   },
   values: {
+    lastHittedPosition: null,
     enemyPosition: null,
-    enemyVelocity: 900,
-    result: 0,
+    enemyVelocity: 1000,
+    currentScore: 0,
     currentTime: 60,
   },
   actions: {
@@ -23,6 +24,9 @@ const state = {
     },
     changeEnemyPositionRandomicaly: () => {
       changeEnemyPositionRandomicaly();
+    },
+    verifyHitScore: () => {
+      verifyHitScore();
     },
   },
 };
@@ -56,6 +60,8 @@ const clearEnemyPosition = () => {
 };
 
 const changeEnemyPositionRandomicaly = () => {
+  state.values.enemyPosition = drawEnemyPosition();
+
   const enemyPositionInterval = setInterval(() => {
     state.actions.clearEnemyPosition();
 
@@ -88,9 +94,31 @@ const paintEnemyPosition = ({ enemyId }) => {
   enemyElement.classList.add("enemy");
 };
 
+const verifyHitScore = () => {
+  state.view.panelCells.forEach((cell, i) => {
+    cell.addEventListener("click", () => {
+      if (cell.classList.contains("enemy")) {
+        if (state.values.lastHittedPosition === i) {
+          return;
+        }
+
+        state.values.lastHittedPosition = i;
+        state.values.currentScore++;
+
+        updateScoreInScreen();
+      }
+    });
+  });
+};
+
+const updateScoreInScreen = () => {
+  state.view.score.textContent = state.values.currentScore;
+};
+
 const runMatch = () => {
   state.actions.runGameClock();
   state.actions.changeEnemyPositionRandomicaly();
+  state.actions.verifyHitScore();
 };
 
 const initialize = () => {

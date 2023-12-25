@@ -1,12 +1,13 @@
 .panel-container {
-    flex: 1;
+    position: relative;
     display: flex;
+    flex: 1;
     justify-content: center;
     background: url('../images/wall.png');
 }
 
 #panel {
-    display: grid;
+    display: none;
     margin-top: 32px;
     background-color: #FFFE71;
 }

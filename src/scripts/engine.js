@@ -1,9 +1,11 @@
 const state = {
   view: {
+    panel: document.getElementById("panel"),
     panelCells: document.querySelectorAll(".panel-cell"),
     enemy: document.querySelector(".enemy"),
     timeLeft: document.querySelector("#time-value"),
     score: document.querySelector("#score-value"),
+    startButton: document.getElementById("start-game"),
   },
   values: {
     lastHittedPosition: null,
@@ -122,7 +124,11 @@ const runMatch = () => {
 };
 
 const initialize = () => {
-  runMatch();
+  state.view.startButton.addEventListener("click", () => {
+    state.view.startButton.style.display = "none";
+    state.view.panel.style.display = "grid";
+    runMatch();
+  });
 };
 
 initialize();

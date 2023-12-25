@@ -3,3 +3,26 @@
     flex-direction: column;
     min-height: 100vh;
 }
+
+#start-game {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    width: 400px;
+    height: 64px;
+    top: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #28282890;
+    transition: box-shadow 0.3s ease;
+    background-color: #A52A2A;
+    color: #FFFAF0;
+    user-select: none;
+    cursor: pointer;
+}
+
+#start-game:active {
+    box-shadow: 0 2px 4px #28282890;
+    transform: translateY(2px);
+}

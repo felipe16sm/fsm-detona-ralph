@@ -40,7 +40,8 @@ const runGameClock = () => {
       state.actions.stopGameClock({
         clock,
         action: () => {
-          alert("Game Over!");
+          const gameOverModalEvent = new Event("openGameOverModal");
+          document.dispatchEvent(gameOverModalEvent);
         },
       });
       return;

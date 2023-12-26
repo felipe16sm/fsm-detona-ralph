@@ -1,0 +1,49 @@
+#game-over-modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000080;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#game-over-modal-content-wrapper {
+    background-color: #282828;
+    color: #FFFAF0;
+    font-size: 28px;
+    padding: 16px;
+    width: 400px;
+    border-radius: 8px;
+}
+
+#game-over-modal-content-header {
+    text-align: center;
+}
+
+#game-over-modal-content {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#game-over-modal-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-over-modal-close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A52A2A;
+    color: #FFFAF0;
+    width: 216px;
+    height: 56px;
+    border-radius: 4px;
+    user-select: none;
+    cursor: pointer;
+}

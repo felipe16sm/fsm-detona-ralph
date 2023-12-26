@@ -1,11 +1,11 @@
-const createPanel = ({ numColumns, numRows, squareSize }) => {
+const createPanel = ({ numColumns, numRows }) => {
   const panelContainerElement = document.querySelector(".panel-container");
   const panelElement = document.createElement("div");
 
+  document.documentElement.style.setProperty("--panel-num-columns", numColumns);
+  document.documentElement.style.setProperty("--panel-num-rows", numRows);
+
   panelElement.id = "panel";
-  panelElement.style.height = `${numRows * squareSize}px`;
-  panelElement.style.gridTemplateColumns = `repeat(${numColumns}, ${squareSize}px)`;
-  panelElement.style.gridTemplateRows = `repeat(${numRows}, ${squareSize}px)`;
 
   for (let i = 0; i < numColumns * numRows; i++) {
     const panelCellElement = document.createElement("div");
@@ -19,4 +19,4 @@ const createPanel = ({ numColumns, numRows, squareSize }) => {
   panelContainerElement.appendChild(panelElement);
 };
 
-createPanel({ numColumns: 3, numRows: 3, squareSize: 120 });
+createPanel({ numColumns: 3, numRows: 3 });

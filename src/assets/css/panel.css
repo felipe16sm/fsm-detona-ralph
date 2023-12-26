@@ -1,3 +1,15 @@
+:root {
+    --panel-square-size: 152px;
+    --panel-num-columns: 3;
+    --panel-num-rows: 3
+}
+
+@media screen and (max-width: 492px) {
+    :root {
+        --panel-square-size: 120px
+    }
+}
+
 .panel-container {
     position: relative;
     display: flex;
@@ -8,8 +20,11 @@
 
 #panel {
     display: none;
+    height: calc(var(--panel-num-columns)*var(--panel-square-size));
     margin-top: 32px;
     background-color: #FFFE71;
+    grid-template-columns: repeat(var(--panel-num-columns), var(--panel-square-size));
+    grid-template-rows: repeat(var(--panel-num-rows), var(--panel-square-size));
 }
 
 .panel-cell {

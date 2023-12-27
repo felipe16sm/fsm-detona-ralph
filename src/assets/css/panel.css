@@ -1,5 +1,5 @@
 :root {
-    --panel-square-size: 152px;
+    --panel-square-size: 144px;
     --panel-num-columns: 3;
     --panel-num-rows: 3
 }
@@ -29,10 +29,10 @@
 
 .panel-cell {
     border: 1px solid #474747;
-    cursor: pointer;
 }
 
 .enemy {
     background: url('../images/ralph.png');
     background-size: cover;
+    cursor: pointer;
 }

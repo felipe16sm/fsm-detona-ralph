@@ -16,7 +16,7 @@
 
 ## 💻 Sobre o jogo
 
-<p style="margin-top:8px">Nesse jogo temos um painel com vários quadrados onde o personagem fica mudando de quadrado de tempos e tempos. O jogador deve clicar nos quadrados onde o personagem parece com isso é adicionado pontos ao seu score. No final o score total é exibido após a contagem do tempo se encerrar.</p>
+<p style="margin-top:8px">Nesse jogo, há um painel com vários quadrados nos quais o personagem muda de lugar de tempos em tempos. O jogador deve clicar nos quadrados onde o personagem aparece, o que adiciona pontos ao seu placar. No final, o placar total é exibido após a contagem do tempo se encerrar.</p>
 
 ![Gameplay](src/assets/images/gameplay.gif)
 

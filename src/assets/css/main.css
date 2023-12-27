@@ -11,12 +11,12 @@
     align-items: center;
     font-size: 28px;
     width: 400px;
-    height: 64px;
+    height: 96px;
     top: 30%;
     border-radius: 8px;
     box-shadow: 0 4px 8px #28282890;
     transition: box-shadow 0.3s ease;
-    background-color: #A52A2A;
+    background-color: #FF6347;
     color: #FFFAF0;
     user-select: none;
     cursor: pointer;

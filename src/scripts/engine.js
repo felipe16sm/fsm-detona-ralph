@@ -36,6 +36,8 @@ const state = {
 const runGameClock = () => {
   state.view.timeLeft.textContent = state.values.currentTime;
   const clock = setInterval(() => {
+    state.values.currentTime--;
+    state.view.timeLeft.textContent = state.values.currentTime;
     if (state.values.currentTime <= 0) {
       state.actions.stopGameClock({
         clock,
@@ -46,8 +48,6 @@ const runGameClock = () => {
       });
       return;
     }
-    state.values.currentTime--;
-    state.view.timeLeft.textContent = state.values.currentTime;
   }, 1000);
 };
 
@@ -63,7 +63,10 @@ const clearEnemyPosition = () => {
 };
 
 const changeEnemyPositionRandomicaly = () => {
+  let enemyPosition = drawEnemyPosition();
+
   state.values.enemyPosition = drawEnemyPosition();
+  paintEnemyPosition({ enemyId: enemyPosition });
 
   const enemyPositionInterval = setInterval(() => {
     state.actions.clearEnemyPosition();
@@ -73,7 +76,7 @@ const changeEnemyPositionRandomicaly = () => {
       return;
     }
 
-    let enemyPosition = drawEnemyPosition();
+    enemyPosition = drawEnemyPosition();
 
     while (enemyPosition === state.values.enemyPosition) {
       enemyPosition = drawEnemyPosition();
